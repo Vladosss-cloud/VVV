@@ -1,0 +1,26 @@
+#include <iostream>
+#include <iomanip> // Для управления точностью вывода
+
+using namespace std;
+
+int main() {
+    int c, d;
+    
+    // Ввод значений с и d
+    cout << "Enter two integers: ";
+    cin >> c >> d;
+
+    // Вычисление полусуммы кубов
+    double result = (static_cast<double>(c * c * c) + static_cast<double>(d * d * d)) / 2.0;
+    
+    // Вывод результата с точностью до трёх знаков после запятой
+    cout << fixed << setprecision(3);
+    cout << "Half sum of cubes of numbers " << c << " and " << d << ": " << result << endl;
+
+    // Ожидание ввода перед закрытием программы
+    cout << "Press Enter to exit...";
+    cin.ignore(); // Игнорирует предыдущий ввод
+    cin.get();    // Ожидает нажатие клавиши
+    
+    return 0;
+}
