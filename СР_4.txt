@@ -1,0 +1,9 @@
+#include <iostream>
+ 
+int main ()
+{
+    char c;
+ 
+    for ( c = 'Z' ; c >= 'A' ; --c )
+        std::cout << c;
+}
